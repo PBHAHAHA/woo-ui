@@ -1,6 +1,6 @@
 <template>
   <div>
-    <wButton>测试</wButton>
+    <!-- <wButton>测试</wButton> -->
   </div>
 </template>
 

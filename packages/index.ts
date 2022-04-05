@@ -1,13 +1,15 @@
 import { App } from '@vue/runtime-core'
-import wButton from './button'
+import WButton from './button'
+import WTree from './tree'
 const install = (app: App) => {
-  app.use(wButton)
+  app.use(WButton)
+  app.use(WTree)
 }
 
 const WooUI = {
   install,
 }
 
-export { wButton }
+export { WButton, WTree }
 
 export default WooUI
