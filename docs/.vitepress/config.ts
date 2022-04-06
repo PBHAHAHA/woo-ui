@@ -27,6 +27,9 @@ const sidebar = {
 }
 
 const config = {
+  title: 'Woo UI',
+  description: '通用Vue3 组件库',
+  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: 'logo.jpeg' }]],
   themeConfig: {
     sidebar,
   },

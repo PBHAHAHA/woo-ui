@@ -1,6 +1,65 @@
-.tree-icon-close {
-  svg {
-    width: 16px;
-    height: 16px;
+$woo-text-weak: var(--woo-text-weak, #575d6c);
+$woo-font-size: var(--woo-font-size, 12px);
+$woo-border-radius: var(--woo-border-radius, 2px);
+$woo-list-item-selected-bg: var(--woo-list-item-selected-bg, #e9edfa);
+$woo-animation-duration-fast: var(--woo-animation-duration-fast, 100ms);
+$woo-list-item-hover-bg: var(--woo-list-item-hover-bg, #f2f5fc);
+$woo-animation-ease-in-smooth: var(--woo-animation-ease-in-smooth,
+  cubic-bezier(0.645, 0.045, 0.355, 1));
+
+.woo-text-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.woo-tree-node {
+  color: $woo-text-weak;
+  line-height: 1.5;
+  white-space: nowrap;
+  position: relative;
+
+  .woo-tree-node__content {
+    display: inline-flex;
+    align-items: center;
+    font-size: $woo-font-size;
+    padding-right: 10px;
+    width: 100%;
+    border-radius: $woo-border-radius;
+    padding-left: 6px;
+    transition: color $woo-animation-duration-fast $woo-animation-ease-in-smooth,
+      background-color $woo-animation-duration-fast $woo-animation-ease-in-smooth;
+    ;
+
+    &.active {
+      background-color: $woo-list-item-selected-bg;
+      text-decoration: none;
+      border-color: transparent;
+    }
+
+    &:not(.active):hover {
+      background-color: $woo-list-item-hover-bg;
+    }
+  }
+
+  .woo-tree-node__content--value-wrapper {
+    display: inline-flex;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+  }
+}
+
+
+.devui-tree-node__title {
+  @extend .woo-text-ellipsis;
+  margin-left: 5px;
+  display: inline-block;
+  border: 1px dashed transparent;
+  border-radius: $woo-border-radius;
+  max-width: 100%;
+
+  &:not(.disabled) {
+    cursor: pointer;
   }
 }

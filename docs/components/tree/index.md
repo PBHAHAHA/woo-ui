@@ -1,45 +1,59 @@
-# 树 Tree
+# Tree 树
 
+:::demo 渲染一棵基本树
 
-
-:::demo 使用`size`、`style`属性定义Card的样式
-  ```vue
-  <template>
-  <w-tree :data="data"></w-tree>
+```vue
+<template>
+  <w-tree :data="data" checkable>
+    
+  </w-tree>
 </template>
-<script>
+
+<script lang="ts">
 import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   setup() {
-    const data = ref([
-      {
-        label: '1',
-        level: 1,
-        children: [
-          {
-            label: '1-1',
-            level: 2,
-            children: [
-              {
-                level: 3,
-                label: '1-1-1'
-              }
-            ]
-          }
-        ]
-      },
-      {
-        label: '2',
-        level: 1,
-        children: [
-          {
-            level: 2,
-            label: '2-1',
-          }
-        ]
-      }
-    ])
+    const data = ref([{
+      label: '一级 1', level: 1,
+      children: [{
+        label: '二级 1-1', level: 2,
+        children: [{
+          label: '三级 1-1-1', level: 3,
+        }]
+      }]
+    }, {
+      label: '一级 2', level: 1,
+      open: true, // 新增
+      disableToggle: true, // 新增
+      disabled: true, // 新增
+      children: [{
+        label: '二级 2-1', level: 2,
+        children: [{
+          label: '三级 2-1-1', level: 3,
+        }]
+      }, {
+        label: '二级 2-2', level: 2,
+        children: [{
+          label: '三级 2-2-1', level: 3,
+        }]
+      }]
+    }, {
+      label: '一级 3', level: 1,
+      open: true, // 新增
+      children: [{
+        label: '二级 3-1', level: 2,
+        children: [{
+          label: '三级 3-1-1', level: 3,
+        }]
+      }, {
+        label: '二级 3-2', level: 2,
+        open: true, // 新增
+        children: [{
+          label: '三级 3-2-1', level: 3,
+        }]
+      }]
+    }])
 
     return {
       data
@@ -47,5 +61,5 @@ export default defineComponent({
   }
 })
 </script>
-  ```
+```
 :::
