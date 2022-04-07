@@ -3,7 +3,7 @@ import { treeProps, TreeProps, TreeItem } from "./tree-types"
 import IconOpen from './components/icon-close'
 import IconClose from './components/icon-open'
 import useToggle from './hooks/use-toggle'
-import './tree.scss'
+import './tree'
 
 export default defineComponent({
   name: 'WTree',

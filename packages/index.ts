@@ -1,15 +1,14 @@
 import { App } from '@vue/runtime-core'
-import WButton from './button'
-import WTree from './tree'
-const install = (app: App) => {
-  app.use(WButton)
-  app.use(WTree)
+import TreeInstall, { Tree } from './tree'
+const installs = [
+  TreeInstall
+]
+export {
+  Tree
 }
-
-const WooUI = {
-  install,
+export default {
+  version: '0.0.1',
+  install(app: App): void {
+    installs.forEach((p) => app.use(p as any))
+  }
 }
-
-export { WButton, WTree }
-
-export default WooUI
