@@ -127,21 +127,12 @@ var Tree = defineComponent({
 Tree.install = function(app) {
   app.component(Tree.name, Tree);
 };
-var TreeInstall = {
+var index = {
   title: "Tree \u6811",
   category: "\u6570\u636E\u5C55\u793A",
   status: "1%",
   install(app) {
     app.use(Tree);
-  }
-};
-const installs = [
-  TreeInstall
-];
-var index = {
-  version: "0.0.1",
-  install(app) {
-    installs.forEach((p) => app.use(p));
   }
 };
 export { Tree, index as default };
