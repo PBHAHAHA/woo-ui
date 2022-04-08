@@ -12,7 +12,6 @@ export default defineComponent({
   setup(props: TreeProps, ctx) {
     const { data } = toRefs(props)
     const { openedData, toggle } = useToggle(data.value)
-    console.log(data.value)
     // 增加缩进的展位元素
     const Indent = () => {
       return <span style="display: inline-block;width: 16px;height: 16px;"></span>
@@ -40,7 +39,6 @@ export default defineComponent({
         </div>
       )
     }
-    console.log(openedData)
     return () => {
       return (
         <div class="woo-tree">

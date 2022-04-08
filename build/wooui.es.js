@@ -1603,6 +1603,7 @@ const IconClose = (props) => {
 };
 function useToggle(data) {
   const openedTree = (tree) => {
+    console.log(tree);
     return tree.reduce((acc, item) => {
       return item.open ? acc.concat(item, openedTree(item.children)) : acc.concat(item);
     }, []);
@@ -1671,7 +1672,7 @@ var Tree = defineComponent({
   }
 });
 Tree.install = function(app) {
-  app.component(Tree.name);
+  app.component(Tree.name, Tree);
 };
 var TreeInstall = {
   title: "Tree \u6811",
@@ -1687,6 +1688,7 @@ const installs = [
 var index = {
   version: "0.0.1",
   install(app) {
+    console.log(app);
     installs.forEach((p) => app.use(p));
   }
 };
