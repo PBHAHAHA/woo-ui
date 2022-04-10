@@ -4,6 +4,7 @@ export type TreeItem = {
   label: string
   children?: TreeData
   disableToggle?: boolean
+  disabled?: boolean
   [key: string]: any
 }
 export type TreeData = Array<TreeItem>

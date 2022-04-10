@@ -3,6 +3,7 @@ import { treeProps, TreeProps, TreeItem } from "./tree-types"
 import IconClose from './components/icon-close'
 import IconOpen from './components/icon-open'
 import useToggle from './hooks/use-toggle'
+import useHighlightNode from "./hooks/use-highlight"
 import './tree.scss'
 
 export default defineComponent({
@@ -12,6 +13,7 @@ export default defineComponent({
   setup(props: TreeProps, ctx) {
     const { data } = toRefs(props)
     const { openedData, toggle } = useToggle(data.value)
+    const { nodeClassNameRef, handleClickOnNode, handleInitNodeClassNameRef } = useHighlightNode()
     // 增加缩进的展位元素
     const Indent = () => {
       return <span style="display: inline-block;width: 16px;height: 16px;"></span>
@@ -31,20 +33,24 @@ export default defineComponent({
     }
 
     const renderNode = (item) => {
+      const { key = '', label, disabled, open, level } = item
+      const nodeId = handleInitNodeClassNameRef(disabled, key, label)
       return (
         <div
           class={[
             'woo-tree-node',
-            item.open && 'woo-tree-node__open',
-            item.level !== 1 && 'woo-tree-node__children'
+            open && 'woo-tree-node__open',
+            level !== 1 && 'woo-tree-node__children'
           ]}
         >
-          <div class="woo-tree-node__content">
+          <div
+            class={['woo-tree-node__content', nodeClassNameRef.value[nodeId]]}
+            onClick={() => handleClickOnNode(nodeId)}>
             <div class="woo-tree-node__content--value-wrapper">
               <span class="woo-tree-node__folder">
                 {renderIcon(item)}
               </span>
-              <span class="woo-tree-node__title">{item.label}</span>
+              <span class={["woo-tree-node__title", item.disabled && 'select-disabled']}>{label}</span>
             </div>
           </div>
         </div>
@@ -54,7 +60,6 @@ export default defineComponent({
       return (
         <div class="woo-tree">
           {openedData.value.map((item: TreeItem) => {
-
             return renderNode(item)
           })}
         </div>

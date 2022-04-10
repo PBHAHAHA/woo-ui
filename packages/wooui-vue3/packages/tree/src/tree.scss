@@ -77,6 +77,12 @@ $woo-animation-ease-in-smooth: var(--woo-animation-ease-in-smooth,
   }
 }
 
+.select-disabled {
+  color: $woo-disabled-text;
+  cursor: not-allowed !important;
+  background-color: transparent;
+}
+
 .woo-tree-node__title {
   @extend .woo-text-ellipsis;
 

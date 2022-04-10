@@ -6,5 +6,8 @@
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "docs:dev": "lerna exec --scope wooui-vue3 yarn docs:dev"
+  }
 }
