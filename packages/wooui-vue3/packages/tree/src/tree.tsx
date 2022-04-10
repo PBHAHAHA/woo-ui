@@ -10,8 +10,8 @@ export default defineComponent({
   name: 'WTree',
   props: treeProps,
   emits: [],
-  setup(props: TreeProps, ctx) {
-    const { data } = toRefs(props)
+  setup(props: TreeProps, { slots }) {
+    const { data, checkable } = toRefs(props)
     const { openedData, toggle } = useToggle(data.value)
     const { nodeClassNameRef, handleClickOnNode, handleInitNodeClassNameRef } = useHighlightNode()
     // 增加缩进的展位元素
@@ -22,11 +22,15 @@ export default defineComponent({
     // 节点左侧的收起展开图标
     const renderIcon = (item: TreeItem) => {
       return item.children
-        ? <span class={item.disableToggle && 'toggle-disabled'}>
+        ? <span
+          class={item.disableToggle && 'toggle-disabled'}
+          onClick={() => toggle(item)}>
           {
-            item.open
-              ? <IconClose onClick={() => toggle(item)} />
-              : <IconOpen onClick={() => toggle(item)} />
+            slots.icon
+              ? slots.icon(item)
+              : item.open
+                ? <IconClose />
+                : <IconOpen />
           }
         </span>
         : <Indent />
@@ -50,6 +54,7 @@ export default defineComponent({
               <span class="woo-tree-node__folder">
                 {renderIcon(item)}
               </span>
+              {checkable.value && <input v-model={item.checked} type="checkbox"></input>}
               <span class={["woo-tree-node__title", item.disabled && 'select-disabled']}>{label}</span>
             </div>
           </div>

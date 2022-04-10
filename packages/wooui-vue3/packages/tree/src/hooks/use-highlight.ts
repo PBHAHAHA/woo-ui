@@ -14,12 +14,19 @@ const IS_DISABLED_FLAG = 'woo-tree_isDisabledNode'
 
 const useHighlightNode: TypeUseHighlightNode = () => {
   const nodeClassNameReflectRef = ref<TypeHighlightClass>({})
+  const prevActiveNodeKey = ref<string>('')
   const handleInit = (isDisabled = false, ...keys) => {
     const key = keys.join('-')
     nodeClassNameReflectRef.value[key] = isDisabled ? IS_DISABLED_FLAG : (nodeClassNameReflectRef.value[key] || '')
     return key
   }
   const handleClick = (key) => {
+    if (prevActiveNodeKey.value === key) return
+    if (prevActiveNodeKey.value) {
+      nodeClassNameReflectRef.value[prevActiveNodeKey.value] = ''
+    }
+    nodeClassNameReflectRef.value[key] = HIGHLIGHT_CLASS
+    prevActiveNodeKey.value = key
     if (nodeClassNameReflectRef.value[key] === IS_DISABLED_FLAG) {
       return
     }
