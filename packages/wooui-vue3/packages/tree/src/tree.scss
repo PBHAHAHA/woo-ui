@@ -1,4 +1,5 @@
-$woo-text-weak: var(--woo-text-weak, #575d6c);
+$woo-text-weak: var(--woo-text-weak, #575d6c); //弱文本颜色
+$woo-disabled-text: var(--woo-disabled-text, #adb0b8);
 $woo-font-size: var(--woo-font-size, 12px);
 $woo-border-radius: var(--woo-border-radius, 2px);
 $woo-list-item-selected-bg: var(--woo-list-item-selected-bg, #e9edfa);
@@ -27,9 +28,9 @@ $woo-animation-ease-in-smooth: var(--woo-animation-ease-in-smooth,
     width: 100%;
     border-radius: $woo-border-radius;
     padding-left: 6px;
-    transition: color $woo-animation-duration-fast $woo-animation-ease-in-smooth,
-      background-color $woo-animation-duration-fast $woo-animation-ease-in-smooth;
-    ;
+    // transition: color $woo-animation-duration-fast $woo-animation-ease-in-smooth,
+    //   background-color $woo-animation-duration-fast $woo-animation-ease-in-smooth;
+    // ;
 
     &.active {
       background-color: $woo-list-item-selected-bg;
@@ -50,9 +51,35 @@ $woo-animation-ease-in-smooth: var(--woo-animation-ease-in-smooth,
   }
 }
 
+.woo-tree-node__children {
+  padding-left: 10px;
 
-.devui-tree-node__title {
+  .woo-tree-node__content {
+    margin-left: 8px;
+  }
+}
+
+.woo-tree-node__folder {
+  height: 16px;
+  width: 16px;
+  line-height: 16px;
+
+  .toggle-disabled {
+    cursor: not-allowed !important;
+
+    svg.svg-icon rect {
+      stroke: $woo-disabled-text;
+    }
+
+    svg.svg-icon path {
+      fill: $woo-disabled-text
+    }
+  }
+}
+
+.woo-tree-node__title {
   @extend .woo-text-ellipsis;
+
   margin-left: 5px;
   display: inline-block;
   border: 1px dashed transparent;

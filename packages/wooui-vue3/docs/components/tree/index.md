@@ -25,7 +25,6 @@ export default defineComponent({
     }, {
       label: '一级 2', level: 1,
       open: true, // 新增
-      disableToggle: true, // 新增
       disabled: true, // 新增
       children: [{
         label: '二级 2-1', level: 2,
@@ -34,6 +33,7 @@ export default defineComponent({
         }]
       }, {
         label: '二级 2-2', level: 2,
+        disableToggle: true,
         children: [{
           label: '三级 2-2-1', level: 3,
         }]
