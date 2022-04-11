@@ -1,0 +1,107 @@
+@import '../../../styles/var/woo-var.scss';
+
+.woo-btn {
+  padding: 0 20px;
+  font-size: $woo-font-size-md;
+  height: 32px;
+  line-height: $woo-line-height-base;
+  border: none;
+  color: #fff;
+  // border-radius: $woo-border-radius;
+  border-width: 1px;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &-primary {
+    background-color: $woo-primary;
+
+    &:hover {
+      background-color: $woo-primary-hover;
+    }
+
+    &:focus {
+      background-color: $woo-primary-hover;
+    }
+
+    &:active {
+      background-color: $woo-primary-active;
+    }
+
+    &:disabled {
+      color: $woo-light-text;
+      background: $woo-primary-disabled;
+      border: none;
+    }
+  }
+
+  &-success {
+    background-color: $woo-success;
+
+    &:hover {
+      background-color: $woo-success-hover;
+    }
+
+    &:focus {
+      background-color: $woo-success-hover;
+    }
+
+    &:active {
+      background-color: $woo-success-active;
+    }
+
+    &:disabled {
+      color: $woo-light-text;
+      // background: $woo-success-disabled;
+      border: none;
+    }
+  }
+
+  &-warning {
+    background-color: $woo-warning;
+
+    &:hover {
+      background-color: $woo-warning-hover;
+    }
+
+    &:focus {
+      background-color: $woo-warning-hover;
+    }
+
+    &:active {
+      background-color: $woo-warning-active;
+    }
+
+    &:disabled {
+      color: $woo-light-text;
+      // background: $woo-warning-disabled;
+      border: none;
+    }
+  }
+
+  &-danger {
+    background-color: $woo-contrast;
+
+    &:hover {
+      background-color: $woo-contrast-hover;
+    }
+
+    &:focus {
+      background-color: $woo-contrast-hover;
+    }
+
+    &:active {
+      background-color: $woo-contrast-active;
+    }
+
+    &:disabled {
+      background-color: $woo-contrast-disabled;
+    }
+  }
+}

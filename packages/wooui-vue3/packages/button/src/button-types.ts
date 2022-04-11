@@ -1,7 +1,7 @@
 import type { ComputedRef, ExtractPropTypes, PropType } from "vue"
 
 export type WButtonSize = 'lg' | 'md' | 'sm' | 'mn'
-export type WButtonType = 'primary' | 'success' | 'warning' | 'danger'
+export type WButtonType = 'primary' | 'success' | 'warning' | 'danger' | 'text'
 
 export const buttonProps = {
   icon: {
@@ -13,13 +13,18 @@ export const buttonProps = {
     default: 'md'
   },
   type: {
-    type: String as PropType<WButtonType>
+    type: String as PropType<WButtonType>,
+    default: 'primary'
   },
   loading: {
     type: Boolean,
     default: false
   },
   disabled: {
+    type: Boolean,
+    default: false
+  },
+  plain: {
     type: Boolean,
     default: false
   }
