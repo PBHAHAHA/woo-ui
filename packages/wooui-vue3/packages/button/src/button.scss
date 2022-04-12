@@ -104,4 +104,46 @@
       background-color: $woo-contrast-disabled;
     }
   }
+
+  &-text {
+    padding: 0;
+    color: $woo-text;
+
+    &:hover {
+      color: $woo-list-item-hover-text;
+    }
+
+    &:focus {
+      color: $woo-list-item-hover-text;
+    }
+
+    &:active {
+      color: $woo-list-item-hover-text;
+    }
+
+    &:disabled {
+      color: $woo-disabled-text;
+    }
+  }
+
+  &-sm {
+    padding: 0 4px;
+    height: 24px;
+    font-size: $woo-font-size-sm;
+    min-width: 48px;
+  }
+
+  &-md {
+    padding: 0 16px;
+    height: 32px;
+    font-size: $woo-font-size-md;
+    min-width: 56px;
+  }
+
+  &-lg {
+    padding: 0 24px;
+    height: 36px;
+    font-size: $woo-font-size-lg;
+    min-width: 72px;
+  }
 }

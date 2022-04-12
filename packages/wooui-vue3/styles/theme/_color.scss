@@ -3,12 +3,12 @@ $woo-global-bg: var(--woo-global-bg, #f3f6f8); // 全局带底色背景
 $woo-global-bg-normal: var(--woo-global-bg-normal, #ffffff); // 全局白色背景
 $woo-base-bg: var(--woo-base-bg, #ffffff); // 基础区块背景白色
 $woo-base-bg-dark: var(--woo-base-bg-dark, #333854); // 基础区块背景深色(固定)
-$woo-brand: var(--woo-brand, #5e7ce0); // 品牌色
+$woo-brand: var(--woo-brand, #1661ab); // 品牌色
 $woo-brand-foil: var(--woo-brand-foil, #859bff); // 品牌色辅助色、正衬色
 $woo-brand-hover: var(--woo-brand-hover, #7693f5); // 品牌色高亮色（加亮）
 $woo-brand-active: var(--woo-brand-active, #526ecc); // 品牌色激活色（加深）
-$woo-brand-active-focus: var(--woo-brand-active-focus, #344899); // 品牌色焦点色（重度加深）
-$woo-contrast: var(--woo-contrast, #c7000b); // 品牌色撞色、对比色、反衬色、第二品牌色
+$woo-brand-active-focus: var(--woo-brand-active-focus, #162f92); // 品牌色焦点色（重度加深）
+$woo-contrast: var(--woo-contrast, #d11a2d); // 品牌色撞色、对比色、反衬色、第二品牌色
 $woo-text: var(--woo-text, #252b3a); // 正文文本
 $woo-text-weak: var(--woo-text-weak, #575d6c); // 弱化的正文信息（手风琴子项，表头）
 $woo-aide-text: var(--woo-aide-text, #8a8e99); // 辅助文本、帮助信息（面包屑）
@@ -17,7 +17,7 @@ $woo-placeholder: var(--woo-placeholder, #8a8e99); // 占位符
 $woo-light-text: var(--woo-light-text, #ffffff); // 有色深色背景下字体颜色（固定）
 $woo-dark-text: var(--woo-dark-text, #252b3a); // 有色浅色背景下字体颜色（固定）
 $woo-link: var(--woo-link, #526ecc); // 链接文本颜色
-$woo-link-active: var(--woo-link-active, #344899); // 链接文本悬停/激活颜色
+$woo-link-active: var(--woo-link-active, #162f92); // 链接文本悬停/激活颜色
 $woo-link-light: var(--woo-link-light, #96adfa); // 深色背景下链接文本颜色
 $woo-link-light-active: var(--woo-link-light-active, #beccfa); // 深色背景下链接文本悬停/激活颜色
 $woo-line: var(--woo-line, #adb0b8); // 边框分割线，仅用于边框
@@ -26,15 +26,7 @@ $woo-block: var(--woo-block, #ffffff); // 大面积的不可折叠区块的背�
 $woo-area: var(--woo-area, #f8f8f8); // 可折叠区块的背景色（展开区域颜色）
 $woo-danger: var(--woo-danger, #f66f6a); // 失败、错误、告警
 $woo-warning: var(--woo-warning, #fac20a); // 警告、需注意类型提示
-$woo-warning-hover: var(--woo-warning, #fac20a); // 警告、需注意类型提示
-$woo-warning-active: var(--woo-warning, #fac20a);
-$woo-warning-active-focus: var(--woo-warning, #fac20a);
-$woo-waiting: var(--woo-waiting, #9faad7); // 等待中
-$woo-success: var(--woo-success, #50d4ab); // 成功、正确
-$woo-success-hover: var(--woo-success, #50d4ab); // 成功、
-$woo-success-active: var(--woo-success, #50d4ab);
-$woo-success-active-focus: var(--woo-success, #50d4ab);
-$woo-info: var(--woo-info, #5e7ce0); // 通知、一般提示、执行中
+$woo-info: var(--woo-info, #1661ab); // 通知、一般提示、执行中
 $woo-initial: var(--woo-initial, #e9edfa); // 初始化、未执行
 $woo-unavailable: var(--woo-unavailable, #f5f5f6); // 不可用、禁用状态
 $woo-shadow: var(--woo-shadow, rgba(0, 0, 0, 0.2)); // 阴影色
@@ -45,16 +37,16 @@ $woo-icon-text: var(--woo-icon-text, #252b3a); // 文字图标颜色，同 正�
 $woo-icon-bg: var(--woo-icon-bg, #ffffff); // svg图标 背景色
 $woo-icon-fill: var(--woo-icon-fill, #d3d5d9); // svg图标 灰色填充色
 $woo-icon-fill-hover: var(--woo-icon-fill-hover, #adb5ce); // svg图标 灰色填充色悬停反馈色
-$woo-icon-fill-active: var(--woo-icon-fill-active, #5e7ce0); // svg图标 高亮填充色（激活状态）
+$woo-icon-fill-active: var(--woo-icon-fill-active, #1661ab); // svg图标 高亮填充色（激活状态）
 $woo-icon-fill-active-hover: var(--woo-icon-fill-active-hover, #526ecc); // svg图标 高亮填充色悬停反馈色
 // 表单
 $woo-form-control-line: var(--woo-form-control-line, #adb0b8); // 表单控件边框色，同 边框分割线
 $woo-form-control-bg: var(--woo-form-control-bg, #ffffff); // 表单控件背景色
 $woo-form-control-line-hover: var(--woo-form-control-line-hover, #575d6c); // 表单控件边框悬停反馈色
-$woo-form-control-line-active: var(--woo-form-control-line-active, #5e7ce0); // 表单控件边框激活色，用于获得焦点
-$woo-form-control-line-active-hover: var(--woo-form-control-line-active-hover, #344899); // 表单控件边框激活色，用于获得焦点且悬停
+$woo-form-control-line-active: var(--woo-form-control-line-active, #1661ab); // 表单控件边框激活色，用于获得焦点
+$woo-form-control-line-active-hover: var(--woo-form-control-line-active-hover, #162f92); // 表单控件边框激活色，用于获得焦点且悬停
 // 列表
-$woo-list-item-active-bg: var(--woo-list-item-active-bg, #5e7ce0); // 列表类型单选选中背景
+$woo-list-item-active-bg: var(--woo-list-item-active-bg, #1661ab); // 列表类型单选选中背景
 $woo-list-item-active-text: var(--woo-list-item-active-text, #ffffff); // 列表类型单选选中背景搭配文本，同 有色深色背景下字体颜色（固定）
 $woo-list-item-active-hover-bg: var(--woo-list-item-active-hover-bg, #526ecc); // 列表类型单选选中背景悬停反馈色（仅用于分页等）
 $woo-list-item-hover-bg: var(--woo-list-item-hover-bg, #f2f5fc); // 列表类型普通选项悬停背景
@@ -80,13 +72,21 @@ $woo-float-block-shadow: var(--woo-float-block-shadow, rgba(94, 124, 224, 0.3));
 $woo-highlight-overlay: var(--woo-highlight-overlay, rgba(255, 255, 255, 0.8)); // 局部半透明全局浮层背景色（比如底部）
 
 // 按钮
-$woo-primary: var(--woo-primary, #5e7ce0); // 主要按钮，同品牌色
-$woo-primary-hover: var(--woo-primary-hover, #7693f5); // 主要按钮悬停
-$woo-primary-active: var(--woo-primary-active, #344899); // 主要按钮激活
+$woo-primary: var(--woo-primary, #1661ab); // 主要按钮，同品牌色
+$woo-primary-hover: var(--woo-primary-hover, #3e74aa); // 主要按钮悬停
+$woo-primary-active: var(--woo-primary-active, #162f92); // 主要按钮激活
 
 $woo-contrast-hover: var(--woo-contrast-hover, #d64a52); // 突出按钮悬停
-$woo-contrast-active: var(--woo-contrast-active, #b12220); // 突出按钮激活
+$woo-contrast-active: var(--woo-contrast-active, #ff0019); // 突出按钮激活
 $woo-contrast-disabled: var(--woo-contrast-disabled, #ffbcba); // 突出按钮禁用
+
+$woo-success: var(--woo-success, #41ae3c); // 成功按钮，同品牌色
+$woo-success-hover: var(--woo-success-hover, #6eba6a); // 成功悬停
+$woo-success-active: var(--woo-success-active, #189012); // 成功按钮激活
+
+$woo-warning: var(--woo-warning, #feba07); // 警告按钮，同品牌色
+$woo-warning-hover: var(--woo-warning-hover, #f6d686); // 警告按钮悬停
+$woo-warning-active: var(--woo-warning-active, #c28d08); // 警告按钮激活
 
 // 状态
 $woo-danger-line: var(--woo-danger-line, #f66f6a); // 失败边框
@@ -95,13 +95,13 @@ $woo-danger-bg: var(--woo-danger-bg, #ffeeed); // 失败底色
 $woo-warning-line: var(--woo-warning-line, #fa9841); // 警告边框
 $woo-warning-bg: var(--woo-warning-bg, #fff3e8); // 警告底色
 
-$woo-info-line: var(--woo-info-line, #5e7ce0); // 通知边框
+$woo-info-line: var(--woo-info-line, #1661ab); // 通知边框
 $woo-info-bg: var(--woo-info-bg, #f2f5fc); // 通知底色
 
 $woo-success-line: var(--woo-success-line, #50d4ab); // 成功边框
 $woo-success-bg: var(--woo-success-bg, #edfff9); // 成功底色
-$woo-primary-line: var(--woo-primary-line, #5e7ce0); // 主要边框
+$woo-primary-line: var(--woo-primary-line, #1661ab); // 主要边框
 $woo-primary-bg: var(--woo-primary-bg, #f2f5fc); // 主要底色
 
-$woo-default-line: var(--woo-default-line, #5e7ce0); // 默认边框
+$woo-default-line: var(--woo-default-line, #1661ab); // 默认边框
 $woo-default-bg: var(--woo-default-bg, #f3f6f8); // 默认底色

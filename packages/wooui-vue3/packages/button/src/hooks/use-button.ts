@@ -6,9 +6,6 @@ import { ButtonProps, UseButtonReturnType, WButtonType } from "../button-types";
 export default function useButton(props: ButtonProps, ctx: SetupContext): UseButtonReturnType {
   const hasContent = computed(() => ctx.slots.default);
   console.log(ctx.slots.default)
-  const colorMap = {
-
-  }
   const iconClass = computed(() => '1')
   const defaultColor = props.type
   const classes = computed(() => ({
