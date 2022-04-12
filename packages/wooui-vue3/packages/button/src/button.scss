@@ -58,7 +58,7 @@
 
     &:disabled {
       color: $woo-light-text;
-      // background: $woo-success-disabled;
+      background: $woo-success-disabled;
       border: none;
     }
   }
@@ -80,7 +80,7 @@
 
     &:disabled {
       color: $woo-light-text;
-      // background: $woo-warning-disabled;
+      background: $woo-warning-disabled;
       border: none;
     }
   }

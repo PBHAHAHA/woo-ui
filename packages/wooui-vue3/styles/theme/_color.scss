@@ -58,6 +58,9 @@ $woo-disabled-bg: var(--woo-disabled-bg, #f5f5f6); // disabled背景颜色
 $woo-disabled-line: var(--woo-disabled-line, #dfe1e6); // disabled边框颜色
 $woo-disabled-text: var(--woo-disabled-text, #adb0b8); // disabled文字颜色
 $woo-primary-disabled: var(--woo-primary-disabled, #beccfa); //主要按钮disabled状态文字颜色
+$woo-success-disabled: var(--woo-primary-disabled, #a5c6a3); //主要按钮disabled状态文字颜色
+$woo-danger-disabled: var(--woo-primary-disabled, #beccfa); //主要按钮disabled状态文字颜色
+$woo-warning-disabled: var(--woo-primary-disabled, #f0d694); //主要按钮disabled状态文字颜色
 $woo-icon-fill-active-disabled: var(--woo-icon-fill-active-disabled, #beccfa); // svg图标激活状态禁用色
 // 特殊背景色
 $woo-label-bg: var(--woo-label-bg, #eef0f5); // 默认标签化选项背景色

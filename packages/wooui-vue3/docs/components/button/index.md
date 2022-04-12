@@ -25,3 +25,16 @@
   </template>
   ```
 :::
+
+禁用
+:::demo 使用disabled属性定义button的尺寸
+  ```vue
+  <template>
+    <w-button disabled style="marginRight: 10px;">确定</w-button>
+    <w-button disabled style="marginRight: 10px;" type="success">成功</w-button>
+    <w-button disabled style="marginRight: 10px;" type="danger">危险</w-button>
+    <w-button disabled style="marginRight: 10px;" type="warning">警告</w-button>
+    <w-button disabled style="marginRight: 10px;" type="text">警告</w-button>
+  </template>
+  ```
+:::
