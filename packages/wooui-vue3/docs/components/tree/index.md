@@ -36,7 +36,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-
+import '@devui-design/icons/icomoon/devui-icon.css';
 export default defineComponent({
   setup() {
     const data = ref([{

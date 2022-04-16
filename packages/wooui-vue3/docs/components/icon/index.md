@@ -4,7 +4,6 @@
 :::demo 通过`name`属性，指定需要显示的图标。
 ```vue
 <w-icon name="admin-line"></w-icon>
-<i class="ri-home-4-line"></i>
 <w-icon name="https://devui.design/components/assets/logo.svg" size="16px"></w-icon>
 ```
 
