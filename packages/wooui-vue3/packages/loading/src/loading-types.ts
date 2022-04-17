@@ -1,0 +1,47 @@
+import type { CSSProperties } from "vue"
+import { ExtractPropTypes, PropType, VNode } from "vue"
+
+type PositionType = CSSProperties['position']
+
+export interface LoadingType {
+  value: Promise<unknown> | Array<Promise<unknown>> | undefined
+}
+
+export interface BindingType extends LoadingType {
+  [key: string]: unknown
+}
+
+
+class View {
+  top?: string = '50%'
+  left?: string = '50%'
+}
+
+export const loadingProps = {
+  message: String,
+  backgrop: Boolean,
+  view: {
+    type: Object as PropType<View>,
+    default: () => {
+      return new View()
+    }
+  },
+  zIndex: Number,
+  isFull: {
+    type: Boolean,
+    fefault: false
+  }
+} as const
+
+
+export class LoadingOptions {
+  target?: Element | null
+  message?: string
+  loadingTemplate?: VNode['component']
+  backdrop?: boolean = true
+  positionType?: PositionType = 'relative'
+  view?: View = new View()
+  zIndex?: number
+}
+
+export type LoadingProps = ExtractPropTypes<typeof loadingProps>
