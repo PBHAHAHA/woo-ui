@@ -44,25 +44,25 @@ export default defineComponent({
 
     return (
       isShow &&
-      <div class={['devui-loading-contanier', isFull ? 'devui-loading--full' : '']}>
+      <div class={['woo-loading-contanier', isFull ? 'woo-loading--full' : '']}>
         {
           $slots.default?.() ||
-          <div class="devui-loading-wrapper">
+          <div class="woo-loading-wrapper">
             {
               backdrop
-                ? <div class="devui-loading-mask"></div>
+                ? <div class="woo-loading-mask"></div>
                 : null
             }
-            <div style={style} class="devui-loading-area">
-              <div class="devui-busy-default-spinner">
-                <div class="devui-loading-bar1"></div>
-                <div class="devui-loading-bar2"></div>
-                <div class="devui-loading-bar3"></div>
-                <div class="devui-loading-bar4"></div>
+            <div style={style} class="woo-loading-area">
+              <div class="woo-busy-default-spinner">
+                <div class="woo-loading-bar1"></div>
+                <div class="woo-loading-bar2"></div>
+                <div class="woo-loading-bar3"></div>
+                <div class="woo-loading-bar4"></div>
               </div>
               {
                 message
-                  ? <span class="devui-loading-text">{message}</span>
+                  ? <span class="woo-loading-text">{message}</span>
                   : null
               }
             </div>
