@@ -3,6 +3,8 @@ import { ExtractPropTypes, PropType, VNode } from "vue"
 
 type PositionType = CSSProperties['position']
 
+
+
 export interface LoadingType {
   value: Promise<unknown> | Array<Promise<unknown>> | undefined
 }
@@ -45,3 +47,10 @@ export class LoadingOptions {
 }
 
 export type LoadingProps = ExtractPropTypes<typeof loadingProps>
+
+
+export interface TargetHTMLElement extends HTMLElement {
+  mask?: HTMLElement
+  instance?: VNode['component']
+  options?: LoadingOptions
+}
