@@ -19,11 +19,11 @@ const loadingDirective = {
       defineComponent(Loading),
       {...props}
     )
-    console.log(loadingInstance)
-    console.dir(el)
     el.style.position = props.positionType
     el.options = props;
     el.instance = loadingInstance;
+    el.instance.proxy?.open?.()
+    // el.appendChild(el.mask)
     // handleProps(el, vnode.props)
     // console.log(el,binding,vnode)
     console.log("第一次加载 loading", vnode)

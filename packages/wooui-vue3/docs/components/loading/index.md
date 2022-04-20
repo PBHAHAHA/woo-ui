@@ -5,11 +5,11 @@
 :::demo 
   ```vue
   <template>
-    <w-button @click="changeLoadingStatus" v-loading="loadingStatus">点击</w-button>
+    <w-button @click="changeLoadingStatus" v-loading="true">点击</w-button>
   </template>
   <script setup>
     import {ref } from 'vue'
-    let loadingStatus = ref(false)
+    let loadingStatus = ref(true)
     function changeLoadingStatus(){
       loadingStatus.value = true
       setTimeout(()=>{
