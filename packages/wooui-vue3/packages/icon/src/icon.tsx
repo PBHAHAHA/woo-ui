@@ -1,5 +1,6 @@
 import { defineComponent, toRefs } from 'vue';
 import { iconProps, IconProps } from './icon-types';
+import "../../../styles/font/iconfont.css"
 export default defineComponent({
   name: 'WIcon',
   props: iconProps,
@@ -20,7 +21,7 @@ export default defineComponent({
       ) : (
         <span>
           <i
-            class={`${classPrefix.value} ${classPrefix.value}-${name.value}`}
+            class={`iconfont ${classPrefix.value} ${classPrefix.value}-${name.value}`}
             style={{
               fontSize: size.value,
               color: color.value

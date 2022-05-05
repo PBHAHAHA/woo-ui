@@ -146,4 +146,12 @@
     font-size: $woo-font-size-lg;
     min-width: 72px;
   }
+
+  &-icon-wrap {
+    padding: 0 10px;
+    .iconfont {
+      vertical-align: middle !important;
+      margin-right: 2px !important; 
+    }
+  }
 }

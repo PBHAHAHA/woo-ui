@@ -1,6 +1,7 @@
 import { defineComponent, SetupContext, toRefs } from 'vue'
 import { buttonProps, ButtonProps } from './button-types'
 import useButton from './hooks/use-button'
+import { iconProps } from '../../icon/src/icon-types'
 import './button.scss';
 
 const wButton = defineComponent({
@@ -18,9 +19,12 @@ const wButton = defineComponent({
       }
       ctx.emit('click', e)
     }
+    console.log(iconProps)
     return () => (
       <button class={classes.value} disabled={disabled.value} onClick={onClick}>
-        {/* {icon.value && } */}
+        {
+          icon.value ? <i class={`iconfont ${iconProps.classPrefix.default}-${icon.value}`}></i> : ''
+        }
         <span class='button-content'>{slots.default?.()}</span>
       </button>
     )

@@ -3,8 +3,8 @@
 
 :::demo 通过`name`属性，指定需要显示的图标。
 ```vue
-<w-icon name="admin-line"></w-icon>
-<w-icon name="https://devui.design/components/assets/logo.svg" size="16px"></w-icon>
+<w-icon name="check"></w-icon>
+<w-icon name="check-circle-fill" size="16px"></w-icon>
 ```
 
 :::
@@ -15,7 +15,7 @@
 
 ```vue
 <w-icon name="like" color="#50d4ab"></w-icon>
-<w-icon name="home-4-line" color="#f95f5b"></w-icon>
+<w-icon name="search" color="#f95f5b"></w-icon>
 <i class="ri-admin-line"></i>
 
 ```
@@ -27,8 +27,8 @@
 :::demo 通过`size`属性，设置图标大小。
 
 ```vue
-<!-- <w-icon name="home-4-line" size="32px"></w-icon>
-<w-icon name="home-4-line" size="48px"></w-icon> -->
+<w-icon name="search" size="32px"></w-icon>
+<w-icon name="search" size="48px"></w-icon>
 ```
 
 :::
