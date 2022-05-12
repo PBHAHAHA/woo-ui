@@ -1,0 +1,72 @@
+@import '../../../styles/var/woo-var.scss';
+
+.woo-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.woo-carousel-item-container {
+  display: flex;
+  position: relative;
+  transition: left 500ms ease 0s; // 内容切换时的动效
+  & > * {
+    flex: 1;
+  }
+}
+
+.woo-carousel-pagination {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -18px;
+  .arrow {
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background: var(--woo-highlight-overlay, rgba(255, 255, 255, .8));
+    box-shadow: var(--woo-shadow-length-hover, 0 4px 16px 0) var(--woo-light-shadow, rgba(0, 0, 0, .1));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    outline: 0;
+    transition: background-color var(--woo-animation-duration-slow, .3s) var(--woo-animation-ease-in-out-smooth, cubic-bezier(.645, .045, .355, 1)); // 按钮hover时的动效
+    &:hover {
+      background: var(--woo-area, #f8f8f8);
+    }
+
+    &.arrow-left {
+      margin-left: 20px;
+    }
+
+    &.arrow-right {
+      margin-right: 20px;
+    }
+  }
+}
+
+.woo-carousel-indicator {
+  display: flex;
+  position: absolute;
+  bottom: 12px;
+  justify-content: center;
+  width: 100%;
+
+  .woo-carousel-indicator-item {
+    cursor: pointer;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    margin-right: 8px;
+    background: var(--woo-icon-fill, #d3d5d9);
+
+    &.active {
+      width: 24px;
+      background: var(--woo-list-item-active-bg, #5e7ce0);
+      transition: all var(--woo-animation-duration-slow, .3s) var(--woo-animation-ease-in-smooth, cubic-bezier(.645, .045, .355, 1)); // 切换内容时指示器小圆点上的动效
+    }
+  }
+}
