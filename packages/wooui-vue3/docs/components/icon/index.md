@@ -34,5 +34,5 @@
 :::
 
 ```css
-@import '@devui-design/icons/icomoon/devui-icon.css';
+/* @import '@devui-design/icons/icomoon/devui-icon.css'; */
 ```

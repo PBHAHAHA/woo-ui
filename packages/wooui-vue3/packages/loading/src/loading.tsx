@@ -8,6 +8,7 @@ export default defineComponent({
   inheritAttrs: false,
   props: loadingProps,
   setup(props: LoadingProps) {
+    console.log(props);
     const style: CSSProperties = {
       top: props.view.top,
       left: props.view.left,
@@ -41,8 +42,9 @@ export default defineComponent({
       message,
       $slots
     } = this
-
+    console.log($slots.default)
     return (
+      
       isShow &&
       <div class={['woo-loading-contanier', isFull ? 'woo-loading--full' : '']}>
         {

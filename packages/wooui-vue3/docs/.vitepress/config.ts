@@ -1,30 +1,32 @@
 import demoBlock from 'vitepress-theme-demoblock'
 const sidebar = {
   '/': [
-    { text: '快速开始', link: '/' },
+    // { text: '快速开始', link: '/' },
     {
-      text: '通用',
+      text: '组件',
       children: [
         { text: 'Icon 图标', link: '/components/icon/' },
         { text: 'Button 按钮', link: '/components/button/' },
-        { text: 'Loading 加载', link: '/components/loading/' }
-      ]
-    },
-    {
-      text: '导航'
-    },
-    {
-      text: '反馈'
-    },
-    {
-      text: '数据录入',
-      children: [
+        { text: 'Loading 加载', link: '/components/loading/' },
+        { text: 'Carousel 轮播图', link: '/components/carousel/' },
         { text: 'Tree 树', link: '/components/tree/' }
       ]
     },
-    {
-      text: '布局'
-    }
+    // {
+    //   text: '导航'
+    // },
+    // {
+    //   text: '反馈'
+    // },
+    // {
+    //   text: '数据录入',
+    //   children: [
+        
+    //   ]
+    // },
+    // {
+    //   text: '布局'
+    // }
   ]
 }
 
