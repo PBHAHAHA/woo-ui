@@ -21,7 +21,7 @@ class View {
 
 export const loadingProps = {
   message: String,
-  backgrop: Boolean,
+  backdrop: Boolean,
   view: {
     type: Object as PropType<View>,
     default: () => {

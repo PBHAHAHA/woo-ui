@@ -34,6 +34,7 @@ export default defineComponent({
     }
   },
   render() {
+    console.log(this)
     const {
       isShow,
       isFull,
@@ -42,7 +43,7 @@ export default defineComponent({
       message,
       $slots
     } = this
-    console.log($slots.default)
+    console.log(backdrop)
     return (
       
       isShow &&
